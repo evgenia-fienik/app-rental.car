@@ -1,0 +1,107 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 424px;
+    
+}
+
+.imageWrapper{
+    position: relative;
+    width: 100%;
+    height: 268px;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 28px;
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.favoriteButton {
+    position: absolute;
+    top: 15px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.favoriteIcon path {
+    stroke: rgba(255, 255, 255, 0.8);
+    fill: none;
+    transition: all 0.2s ease;
+    
+}
+
+
+.favoriteButtonActive .favoriteIcon path {
+    stroke: #3470FF;
+    fill: #3470FF;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+    gap: 8px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #121417;
+}
+
+.model {
+    color: #3470FF;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: 500;
+    color: #121417;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    row-gap: 2px;
+    font-size: 12px;
+    color: rgba(18, 20, 23, 0.5);
+}
+
+.tags span::after {
+    content: " | ";
+}
+
+.tags span:last-child::after {
+    content: "";
+}
+
+.button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    background-color: #3470FF;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 28px;
+}
+
+.button:hover {
+    background-color: #0B44CD;
+}

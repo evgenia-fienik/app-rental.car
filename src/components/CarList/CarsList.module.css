@@ -1,0 +1,150 @@
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    
+}
+
+/* ========== ФІЛЬТРИ ========== */
+.filters {
+    display: flex;
+    gap: 18px;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+.filterGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filterLabel {
+    font-size: 14px;
+    font-weight: 500;
+    color: #8a8a89;
+}
+
+/* Select */
+.select {
+    min-width: 224px;
+    padding: 14px 18px;
+    border-radius: 14px;
+    border: none;
+    background: #f7f7fb;
+    font-size: 18px;
+    color: #121417;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.select:hover {
+    background: #ededf5;
+}
+
+.select:focus {
+    background: #ffffff;
+    box-shadow: 0 0 0 2px #3470ff;
+}
+
+/* Mileage Inputs */
+.mileageInputs {
+    display: flex;
+    gap: 8px;
+}
+
+.input {
+    width: 160px;
+    padding: 14px 18px;
+    border-radius: 14px;
+    border: none;
+    background: #f7f7fb;
+    font-size: 18px;
+    color: #121417;
+    outline: none;
+    transition: background 0.2s;
+}
+
+.input::placeholder {
+    color: #121417;
+}
+
+.input:hover {
+    background: #ededf5;
+}
+
+.input:focus {
+    background: #ffffff;
+    box-shadow: 0 0 0 2px #3470ff;
+}
+
+/* Search Button */
+.searchButton {
+    padding: 14px 44px;
+    border-radius: 12px;
+    border: none;
+    background: #3470ff;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    align-self: flex-end;
+}
+
+.searchButton:hover {
+    background: #0b44cd;
+}
+
+.searchButton:active {
+    background: #0535b3;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px 32px;
+}
+
+/* ========== LOAD MORE ========== */
+.loadMoreWrapper {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.loadMoreButton {
+    background: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s;
+    border: 1px solid #3470ff;
+    border-radius: 12px;
+    padding: 12px 51px;
+    min-width: 182px;
+    height: 44px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #101828;
+    margin-top: 50px;
+}
+
+.loadMoreButton:hover:not(:disabled) {
+    color: #0b44cd;
+}
+
+.loadMoreButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ========== СТАНИ ========== */
+.loading,
+.noResults {
+    text-align: center;
+    font-size: 18px;
+    color: #8a8a89;
+    margin-top: 50px;
+}
