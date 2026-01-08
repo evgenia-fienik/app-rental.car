@@ -1,0 +1,63 @@
+.container {
+  border: 1px solid rgba(18, 20, 23, 0.1);
+  border-radius: 12px;
+  padding: 40px;
+  background: #fff;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #121417;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #8a8a89;
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.input, .textarea {
+  width: 100%;
+  background: #f7f7fb;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 16px;
+  color: #121417;
+  outline: none;
+  font-family: inherit;
+}
+
+.input::placeholder, .textarea::placeholder {
+  color: #8a8a89;
+}
+
+.textarea {
+  resize: none;
+}
+
+.button {
+  width: 140px; /* Або 100% якщо хочеш на всю ширину */
+  padding: 14px 0;
+  background: #3470ff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.button:hover {
+  background: #0b44cd;
+}

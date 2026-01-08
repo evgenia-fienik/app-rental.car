@@ -1,11 +1,21 @@
-.header{
+.wraper{
     border-bottom: 1px solid #f2f4f7;
-    padding: 24px 120px;
-    max-width: 1440px;
+    width: 100%;
     height: 68px;
     background-color: #f2f4f7;
     display: flex;
+    justify-content: center;
+}
+.header{
+    width: 100%;
+    /* max-width: 1440px; */
+    height: 68px;
+    padding: 0 128px;
+    background-color: #f2f4f7;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 .nav{
@@ -21,4 +31,16 @@
 
 nav a:hover{
     color:#0b44cd;
+}
+
+@media (max-width: 1280px) {
+  .header {
+    padding: 0 64px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 20px;
+  }
 }

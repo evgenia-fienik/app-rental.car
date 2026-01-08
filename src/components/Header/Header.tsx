@@ -4,7 +4,8 @@ import Image from "next/image";
 
 export function Header() {
     return (
-        <header className={styles.header}>
+        <header className={styles.wraper}>
+            <div className={styles.header}>
             <div>
                 <Link href='/'>
                     <Image
@@ -20,6 +21,7 @@ export function Header() {
                 <Link href="/">Home</Link>
                 <Link href="/catalog">Catalog</Link>
             </nav>
+            </div>
         </header>
     )
 }

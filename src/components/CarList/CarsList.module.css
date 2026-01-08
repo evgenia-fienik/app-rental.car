@@ -1,16 +1,24 @@
 .wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
+  
+    width: 100%;
+    /* margin: 0 auto; */
+    padding: 50px 128px 100px 128px;
+    /* padding: 40px 20px; */
+    box-sizing: border-box;
+
+    
     
 }
 
 /* ========== ФІЛЬТРИ ========== */
 .filters {
+    width: 100%;
     display: flex;
+    justify-content: center;
     gap: 18px;
     align-items: flex-end;
     margin-bottom: 50px;
+    flex-wrap: wrap;
 }
 
 .filterGroup {
@@ -22,65 +30,64 @@
 .filterLabel {
     font-size: 14px;
     font-weight: 500;
+    list-style: 1.29;
     color: #8a8a89;
 }
 
-/* Select */
-.select {
-    min-width: 224px;
-    padding: 14px 18px;
-    border-radius: 14px;
-    border: none;
-    background: #f7f7fb;
-    font-size: 18px;
-    color: #121417;
-    outline: none;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.select:hover {
-    background: #ededf5;
-}
-
-.select:focus {
-    background: #ffffff;
-    box-shadow: 0 0 0 2px #3470ff;
-}
 
 /* Mileage Inputs */
 .mileageInputs {
     display: flex;
-    gap: 8px;
+    background-color: #f7f7fb;
+    border-radius: 14px;
+    overflow: hidden;
+    height: 48px;
+}
+
+.inputWrapper {
+    position: relative;
+    width: 160px; /* Ширина половинки */
+    height: 100%;
+}
+
+/* Розділова лінія посередині */
+.inputWrapper:first-child {
+    border-right: 1px solid rgba(138, 138, 137, 0.2);
+}
+
+.inputLabel {
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    font-weight: 500;
+    color: #121417;
+    pointer-events: none;
+    z-index: 2;
 }
 
 .input {
-    width: 160px;
-    padding: 14px 18px;
-    border-radius: 14px;
+    width: 100%;
+    height: 100%;
+    padding: 14px 24px 14px 73px; /* Відступ зліва під текст From/To */
     border: none;
-    background: #f7f7fb;
+    background-color: transparent;
+    
+    font-family: inherit;
     font-size: 18px;
+    font-weight: 500;
     color: #121417;
     outline: none;
-    transition: background 0.2s;
 }
 
-.input::placeholder {
-    color: #121417;
+/* Ховер ефект */
+.mileageInputs:hover {
+    background-color: #ededf5;
 }
-
-.input:hover {
-    background: #ededf5;
-}
-
-.input:focus {
-    background: #ffffff;
-    box-shadow: 0 0 0 2px #3470ff;
-}
-
 /* Search Button */
 .searchButton {
+    width: 156px;
     padding: 14px 44px;
     border-radius: 12px;
     border: none;
@@ -102,9 +109,22 @@
 }
 
 .grid{
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 48px 32px;
+}
+
+@media (max-width: 1100px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 850px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* ========== LOAD MORE ========== */
@@ -147,4 +167,21 @@
     font-size: 18px;
     color: #8a8a89;
     margin-top: 50px;
+}
+
+@media (max-width: 1280px) {
+  .wrapper {
+    padding: 50px 64px 100px 64px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 30px 20px 50px 20px;
+  }
+  
+  /* На мобільних сітка має перебудуватися */
+  .grid {
+      grid-template-columns: repeat(1, 1fr); /* 1 колонка */
+  }
 }

@@ -1,0 +1,154 @@
+.section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0 100px;
+  background-color: #fff;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 128px;
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Дві рівні колонки */
+  gap: 40px;
+}
+
+/* --- ЛІВА КОЛОНКА --- */
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 460px; /* Висота картинки як на макеті */
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+}
+
+/* --- ПРАВА КОЛОНКА --- */
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #121417;
+}
+
+.id {
+  font-size: 12px;
+  color: rgba(18, 20, 23, 0.5);
+}
+
+.meta {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #121417;
+}
+
+.metaItem {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 600;
+  color: #3470ff;
+  margin-bottom: 24px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #121417;
+  margin-bottom: 40px;
+}
+
+/* Блоки (Conditions, Specs, Accessories) */
+.block {
+  margin-bottom: 32px;
+}
+
+.blockTitle {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #121417;
+}
+
+/* Списки з галочками */
+.conditionsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.conditionItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  color: #121417;
+}
+
+/* Список характеристик (Specs) */
+.specsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.specItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  color: #121417;
+}
+
+/* Адаптивність */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 40px;
+    grid-template-columns: 1fr; /* Одна колонка на планшетах */
+  }
+  
+  .imageWrapper {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+}

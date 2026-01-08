@@ -1,0 +1,104 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%; /* Ширина за замовчуванням */
+  min-width: 0;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #8a8a89;
+  line-height: 1.29;
+}
+
+.trigger {
+  height: 48px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  background-color: #f7f7fb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s;
+}
+
+.trigger:hover {
+  background-color: #ededf5;
+}
+
+.value {
+  font-size: 18px;
+  font-weight: 500;
+  color: #121417;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Стрілочка */
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+/* Випадаючий список */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 4px); /* Відступ від інпуту */
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid rgba(18, 20, 23, 0.05);
+  box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.02);
+  z-index: 100; /* Щоб було поверх карток */
+  overflow: hidden;
+  padding: 14px 8px 14px 18px; /* padding справа менший для скролу */
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 272px; /* Висота списку */
+  overflow-y: auto; /* Скрол */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Кастомний скролбар */
+.list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background-color: rgba(18, 20, 23, 0.05);
+  border-radius: 10px;
+}
+
+.option {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(18, 20, 23, 0.2); /* Сірий колір для неактивних */
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.option:hover,
+.selected {
+  color: #121417; /* Чорний для активних */
+}

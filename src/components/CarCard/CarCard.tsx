@@ -3,6 +3,7 @@ import { Car } from '@/shared/api/cars';
 import styles from './CarCard.module.css';
 import { HeartIcon } from '../Icon/HeartIcon';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface CarCardProps {
   car: Car;
@@ -66,13 +67,8 @@ export function CarCard({ car, onReadMore }: CarCardProps) {
         <span>{formattedMileage} km</span>  
       </div>
     
-      <button
-        type="button"
-        className={styles.button}
-        onClick={handleClick}
-      >
-        Load more
-      </button>
+      <Link href={`/catalog/${car.id}`} className={styles.button}>Load more</Link>
+       
     </article>
   );
 }
