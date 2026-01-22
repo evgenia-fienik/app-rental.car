@@ -38,11 +38,15 @@ export default async function CarDetailsPage(
   if (!car) return <div className={styles.container}>Car not found</div>;
 
   // 2. Безпечна обробка даних
-  // Якщо rentalConditions це рядок - робимо split. Якщо раптом масив - залишаємо як є.
-  const rentalConditions = typeof car.rentalConditions === 'string' 
-    ? car.rentalConditions.split('\n') 
-    : (Array.isArray(car.rentalConditions) ? car.rentalConditions : []);
+ 
+  // const rentalConditions = typeof car.rentalConditions === 'string' 
+  //   ? car.rentalConditions.split('\n') 
+  //   : (Array.isArray(car.rentalConditions) ? car.rentalConditions : []);
 
+  const rentalConditions = car.rentalConditions 
+    ? String(car.rentalConditions).split('\n') 
+    : [];
+    
   // Об'єднуємо аксесуари та функціонал (з перевіркою на undefined)
   const accessories = car.accessories || [];
   const functionalities = car.functionalities || [];
